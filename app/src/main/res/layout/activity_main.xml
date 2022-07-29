@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/Guide_v_10"
+        app:layout_constraintGuide_percent=".10"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/Guide_v_90"
+        app:layout_constraintGuide_percent=".90"
+        />
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Mobile Number"
+        android:maxLength="10"
+        android:inputType="phone"
+        app:layout_constraintEnd_toStartOf="@id/Guide_v_90"
+        app:layout_constraintStart_toStartOf="@id/Guide_v_10"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Call"
+        app:layout_constraintTop_toBottomOf="@id/etPhone"
+        app:layout_constraintEnd_toStartOf="@id/Guide_v_90"
+        app:layout_constraintBottom_toTopOf="@id/etSms"
+        />
+
+    <EditText
+        android:id="@+id/etSms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Message"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toStartOf="@id/Guide_v_90"
+        app:layout_constraintStart_toStartOf="@id/Guide_v_10"
+        app:layout_constraintTop_toBottomOf="@id/btnCall"
+        app:layout_constraintBottom_toTopOf="@id/btnSms"
+        />
+
+    <Button
+        android:id="@+id/btnSms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Message"
+        app:layout_constraintTop_toBottomOf="@id/etSms"
+        app:layout_constraintEnd_toStartOf="@id/Guide_v_90"
+
+        />
+    <EditText
+        android:id="@+id/etShare"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Message that you want to share"
+        app:layout_constraintEnd_toStartOf="@id/Guide_v_90"
+        app:layout_constraintStart_toStartOf="@id/Guide_v_10"
+        app:layout_constraintTop_toBottomOf="@id/btnSms"
+        app:layout_constraintBottom_toTopOf="@id/btnShare"
+        />
+    <Button
+        android:id="@+id/btnShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share"
+        app:layout_constraintTop_toBottomOf="@id/etShare"
+        app:layout_constraintEnd_toStartOf="@id/Guide_v_90"
+app:layout_constraintBottom_toTopOf="@id/etMailto"
+        />
+    <EditText
+        android:id="@+id/etMailto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="To : Email Address"
+        app:layout_constraintEnd_toStartOf="@id/Guide_v_90"
+        app:layout_constraintStart_toStartOf="@id/Guide_v_10"
+        app:layout_constraintTop_toBottomOf="@id/btnShare"
+        app:layout_constraintBottom_toTopOf="@id/etSubject"
+        />
+    <EditText
+        android:id="@+id/etSubject"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Subject"
+        app:layout_constraintEnd_toStartOf="@id/Guide_v_90"
+        app:layout_constraintStart_toStartOf="@id/Guide_v_10"
+        app:layout_constraintTop_toBottomOf="@id/etMailto"
+        app:layout_constraintBottom_toTopOf="@id/etMailMess"
+        />
+    <EditText
+        android:id="@+id/etMailMess"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Email Message"
+        android:lines="3"
+        app:layout_constraintEnd_toStartOf="@id/Guide_v_90"
+        app:layout_constraintStart_toStartOf="@id/Guide_v_10"
+        app:layout_constraintTop_toBottomOf="@id/etSubject"
+        />
+    <Button
+        android:id="@+id/btnMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mail"
+        app:layout_constraintTop_toBottomOf="@id/etMailMess"
+        app:layout_constraintEnd_toStartOf="@id/Guide_v_90"
+
+        />
+
+    <RatingBar
+        android:id="@+id/rbRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnMail"
+        app:layout_constraintEnd_toStartOf="@id/Guide_v_90"
+        app:layout_constraintStart_toStartOf="@id/Guide_v_10"
+
+        />
+
+    <Button
+        android:id="@+id/btnRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_rating"
+        app:layout_constraintEnd_toStartOf="@id/Guide_v_90"
+        app:layout_constraintTop_toBottomOf="@+id/rbRating"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
