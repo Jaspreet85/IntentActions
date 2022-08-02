@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">Intent Actions</string>
     <string name="show_rating">Show Rating</string>
+    <string name="email_message">Email Message</string>
+    <string name="mail">Mail</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="call">Call</string>
+    <string name="enter_message">Enter Message</string>
+    <string name="message">Message</string>
+    <string name="enter_message_that_you_want_to_share">Enter Message that you want to share</string>
+    <string name="share">Share</string>
+    <string name="to_email_address">To : Email Address</string>
+    <string name="subject">Subject</string>
+    <string name="implicit_intent">Implicit Intent</string>
 </resources>

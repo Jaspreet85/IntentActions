@@ -74,7 +74,6 @@ class MainActivity : AppCompatActivity() {
 
         btnShare.setOnClickListener {
             val note :String = etShare.text.toString().trim()
-
             val shareIntent = Intent(Intent.ACTION_SEND)
             shareIntent.type = "text/plain"
             shareIntent.putExtra(Intent.EXTRA_TEXT,note)
@@ -99,7 +98,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnRating.setOnClickListener {
-            Toast.makeText(applicationContext,"Your rating" +rbRating.rating, Toast.LENGTH_SHORT).show()
+            val openURL = Intent(Intent.ACTION_VIEW)
+            openURL.data = Uri.parse("https://play.google.com/")
+                    startActivity(openURL)
         }
 
 
