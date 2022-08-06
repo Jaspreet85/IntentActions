@@ -135,16 +135,15 @@ app:layout_constraintBottom_toTopOf="@id/etMailto"
         app:layout_constraintEnd_toStartOf="@id/Guide_v_90"
 
         />
-
-    <RatingBar
-        android:id="@+id/rbRating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/btnMail"
-        app:layout_constraintEnd_toStartOf="@id/Guide_v_90"
-        app:layout_constraintStart_toStartOf="@id/Guide_v_10"
-
-        />
+<TextView
+    android:id="@+id/tvRating"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Rating"
+    android:textSize="24sp"
+    app:layout_constraintTop_toBottomOf="@id/btnMail"
+    app:layout_constraintStart_toStartOf="@id/Guide_v_10"
+    />
 
     <Button
         android:id="@+id/btnRating"
@@ -152,6 +151,6 @@ app:layout_constraintBottom_toTopOf="@id/etMailto"
         android:layout_height="wrap_content"
         android:text="@string/show_rating"
         app:layout_constraintEnd_toStartOf="@id/Guide_v_90"
-        app:layout_constraintTop_toBottomOf="@+id/rbRating"
+        app:layout_constraintTop_toBottomOf="@+id/tvRating"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

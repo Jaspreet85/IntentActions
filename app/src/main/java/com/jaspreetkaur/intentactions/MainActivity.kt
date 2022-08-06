@@ -20,14 +20,12 @@ class MainActivity : AppCompatActivity() {
     lateinit var etMailto: EditText
     lateinit var etSubject: EditText
     lateinit var etMailMess: EditText
-    lateinit var rbRating: RatingBar
 
     lateinit var btnCall : Button
     lateinit var btnSms: Button
     lateinit var btnShare : Button
     lateinit var btnMail : Button
-    lateinit var btnRating: Button
-
+lateinit var btnRating : Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,13 +38,12 @@ class MainActivity : AppCompatActivity() {
         etMailto = findViewById(R.id.etMailto)
         etSubject = findViewById(R.id.etSubject)
         etMailMess = findViewById(R.id.etMailMess)
-        rbRating = findViewById(R.id.rbRating)
 
         btnCall = findViewById(R.id.btnCall)
         btnSms = findViewById(R.id.btnSms)
         btnShare = findViewById(R.id.btnShare)
         btnMail = findViewById(R.id.btnMail)
-       btnRating = findViewById(R.id.btnRating)
+        btnRating = findViewById(R.id.btnRating)
 
 
         btnCall.setOnClickListener {
@@ -86,10 +83,10 @@ class MainActivity : AppCompatActivity() {
             val subject = etSubject.text.toString().trim()
             val message = etMailMess.text.toString().trim()
 
-            val emailIntent = Intent(Intent.ACTION_SEND)
+            val emailIntent = Intent(Intent.ACTION_SENDTO)
 
             emailIntent.type = "text/plain"
-            emailIntent.data = Uri.parse("Mail to:")
+            emailIntent.data = Uri.parse("mailto:")
             emailIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf(email))
             emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject)
             emailIntent.putExtra(Intent.EXTRA_TEXT, message)
